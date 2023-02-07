@@ -1,0 +1,85 @@
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="hangman.css" />
+    <link href='http://fonts.googleapis.com/css?family=Arvo' rel="stylesheet" type="text/css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"  type="text/css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <title>Hungman Game</title>
+
+    <script type="text/javascript" src="hangman.js"></script>
+</head>
+
+<body>
+
+    <div class="nav">
+        <div class="navlogo">Hungman
+            <img src="./game.png" alt="" class="gameicon">
+        </div>
+        <div class="navname"></div>
+    </div>
+
+    <div class="heading">
+        <h3>Hungman</h3>
+        <p>Choose Your Wheels Wisely</p>
+    </div>
+
+    <div id="hangm">
+
+        <div style="height: 2em; margin-bottom: 3em;">
+            <div id="hangm_end" class="h"></div>
+        </div>
+
+        <div id="hangm_animation">
+            <div id="hangm_2" class="h pole_h"></div>
+            <div id="hangm_1" class="h pole_v"></div>
+
+            <div id="hangm_3" class="h rope"></div>
+
+            <div id="hangm_4" class="h man_head"></div>
+            <div id="hangm_5" class="h man_upper"></div>
+            <div id="hangm_6" class="h man_lower"></div>
+        </div>
+
+        <div style="height: 2em;">
+            <div id="hangm_guesses" class="h"></div>
+        </div>
+
+        <form>
+            <div id="hangm_guessbox" style="height: 8em;" class="h">
+                <div style="height: 4em;">
+                    Guess the Car Name:<div id="hangm_word"></div>
+                </div>
+                <input id="guess" class="guessbox" placeholder="Enter A Letter" onkeyup="Hangman.guess(this.value); this.value=''; return false;" type="text"
+                    placeholder="">
+            </div>
+            <div class="col-sm-3">
+                <button type="button" id="btn-start" class="btn"
+                    onclick="Hangman.reset(); return false;">New Game</button>
+            </div>
+        </form>
+        <br>
+        <br>
+
+    </div>
+
+    <div class="footer">
+
+    </div>
+
+    <div class="copyrightssss">
+        copyright &copy; <span id="datas"></span> | <a href="www.linkedin.com/in/12aryanarora">Aryan Arora</a>
+    </div>
+
+
+    <script type="text/javascript">
+        var objectDate = new Date();
+        var year = objectDate.getFullYear();
+        document.getElementById("datas").innerHTML = year;
+    </script>
+
+</body>
+
+</html>
