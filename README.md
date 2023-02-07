@@ -4,7 +4,7 @@ The traditional hangman puzzle game written as prototype object class in vanilla
 
 ## Demo
 
-You can try it out [here](https://jelofsson.github.io/hangman-js/)
+You can try it out [here](https://aryan1282001.github.io/Hungman/)
 
 ## How to use
 
